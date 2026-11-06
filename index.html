@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0a0a0f">
+<meta name="description" content="Open Member Gen 2 ETHRÉNAL`AURORA — komunitas MLBB yang solid, loyal, dan siap berkembang bersama.">
+<title>ETHRÉNAL`AURORA — Open Member Gen 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- FontAwesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root{--bg:#0a0a0f;--panel:rgba(22,19,34,.72);--purple:#8a2be2;--cyan:#00ffff;--gold:#ffd700;--muted:#b9b4c8;--line:rgba(255,255,255,.12)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:82px}
+body{font-family:Poppins,Arial,sans-serif;background:var(--bg);color:#f7f4ff;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 15% 15%,rgba(138,43,226,.16),transparent 38%),radial-gradient(ellipse at 85% 45%,rgba(0,255,255,.08),transparent 35%),radial-gradient(ellipse at 50% 100%,rgba(138,43,226,.12),transparent 45%)}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit}
+button,a{ -webkit-tap-highlight-color:transparent}
+.navbar{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px clamp(16px,5vw,64px);background:rgba(10,10,15,.72);border-bottom:1px solid var(--line);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.brand{font-family:Cinzel,serif;font-size:clamp(.8rem,2vw,1.05rem);font-weight:800;letter-spacing:.07em;color:var(--gold);white-space:nowrap}
+.nav-links{display:flex;gap:clamp(10px,2vw,25px);align-items:center;font-size:.78rem;color:#e7e1f5}
+.nav-links a:hover{color:var(--cyan)}
+.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid rgba(255,215,0,.6);border-radius:999px;padding:12px 20px;font-weight:700;font-size:.8rem;transition:transform .25s,box-shadow .25s,background .25s;cursor:pointer}
+.nav-cta,.btn-gold{background:linear-gradient(110deg,#ffd700,#f5a623);color:#17120a;box-shadow:0 0 22px rgba(255,215,0,.18)}
+.btn-purple{background:rgba(138,43,226,.2);color:#fff;border-color:rgba(185,125,255,.7)}
+.btn:hover,.nav-cta:hover{transform:translateY(-3px);box-shadow:0 0 28px rgba(0,255,255,.2)}
+.hero{min-height:620px;display:grid;place-items:center;position:relative;text-align:center;overflow:hidden;padding:78px 18px 62px;isolation:isolate}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,6,13,.48),rgba(10,7,18,.8) 65%,var(--bg)),linear-gradient(110deg,rgba(0,0,0,.25),rgba(90,20,160,.4));z-index:-1}
+.hero-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;opacity:.48}
+.hero-inner{max-width:900px}
+.logo-orb{width:112px;height:112px;margin:0 auto 23px;border-radius:50%;padding:4px;background:conic-gradient(from 0deg,var(--gold),var(--cyan),var(--purple),var(--gold));box-shadow:0 0 24px rgba(0,255,255,.28),0 0 60px rgba(138,43,226,.25);animation:float 4s ease-in-out infinite}
+.logo-orb img{width:100%;height:100%;object-fit:cover;border-radius:50%;border:3px solid #100d19;background:#171020}
+.eyebrow{color:var(--cyan);font-size:.73rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;margin-bottom:13px}
+h1,h2,.serif{font-family:Cinzel,Georgia,serif}
+h1{font-size:clamp(2rem,6.2vw,5.1rem);line-height:1.1;letter-spacing:.025em;text-shadow:0 0 28px rgba(138,43,226,.45);overflow-wrap:anywhere}
+h1 span{color:var(--gold)}
+.tagline{font-family:Cinzel,serif;font-size:clamp(1rem,2.5vw,1.5rem);color:#e5d9ff;margin:18px 0 13px}
+.hero-desc{max-width:640px;margin:0 auto;color:#d1cbdc;line-height:1.8;font-size:.92rem}
+.hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:28px}
+.hero-meta{margin-top:27px;font-size:.75rem;color:#c1b9d2;letter-spacing:.04em}
+.video-section{padding:32px 18px 68px;max-width:1050px;margin:auto}
+.section-kicker{text-align:center;color:var(--cyan);font-size:.7rem;font-weight:700;letter-spacing:.24em;margin-bottom:9px}
+.section-title{text-align:center;font-size:clamp(1.7rem,4vw,2.65rem);margin-bottom:17px}
+.video-frame{border:1px solid rgba(0,255,255,.25);padding:7px;border-radius:22px;background:linear-gradient(135deg,rgba(138,43,226,.24),rgba(0,255,255,.08));box-shadow:0 15px 55px rgba(0,0,0,.35)}
+.video-frame video{display:block;width:100%;max-height:520px;aspect-ratio:16/9;object-fit:cover;border-radius:16px;background:#100c1b}
+section.content-section{padding:75px clamp(18px,5vw,70px);max-width:1200px;margin:auto}
+.section-copy{max-width:780px;margin:0 auto;text-align:center;color:var(--muted);line-height:1.95;font-size:.95rem}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px}
+.glass{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 15px 45px rgba(0,0,0,.18);backdrop-filter:blur(12px)}
+.glass h3{font-family:Cinzel,serif;color:var(--gold);margin-bottom:10px;font-size:1rem}
+.glass p{font-size:.86rem;line-height:1.8;color:var(--muted)}
+.statline{display:flex;gap:12px;align-items:center;margin:10px 0;color:#eee7ff;font-size:.87rem}
+.statline b{color:var(--cyan)}
+.requirements{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin-top:32px}
+.req-card{position:relative;overflow:hidden;min-height:160px;transition:transform .25s,border-color .25s}
+.req-card:hover{transform:translateY(-5px);border-color:rgba(0,255,255,.45)}
+.req-icon{font-size:1.55rem;margin-bottom:13px;filter:drop-shadow(0 0 10px rgba(0,255,255,.25))}
+.req-card h3{font-family:Poppins,sans-serif;color:#fff;font-size:.91rem;margin-bottom:7px}
+.req-card p{color:var(--muted);font-size:.8rem;line-height:1.75;overflow-wrap:anywhere}
+.req-card strong{color:var(--gold)}
+.copy-chip{display:inline-block;border:1px solid rgba(0,255,255,.25);background:rgba(0,255,255,.06);padding:5px 8px;border-radius:7px;color:#e7ffff;margin-top:6px;font-size:.74rem}
+.form-wrap{max-width:850px;margin:34px auto 0}
+.form-intro{color:var(--muted);text-align:center;line-height:1.8;font-size:.88rem;margin-bottom:23px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:17px}
+.field{display:flex;flex-direction:column;gap:8px}
+.field.full{grid-column:1/-1}
+label,.field-label{font-size:.81rem;color:#e9e2f5;font-weight:600}
+input,select,textarea{width:100%;border:1px solid rgba(255,255,255,.14);background:rgba(5,5,12,.72);color:#fff;border-radius:12px;padding:13px 14px;outline:none;transition:border-color .2s,box-shadow .2s}
+input:focus,select:focus,textarea:focus{border-color:var(--cyan);box-shadow:0 0 0 3px rgba(0,255,255,.08)}
+input::placeholder,textarea::placeholder{color:#81798f}
+select option{background:#151020;color:#fff}
+textarea{min-height:120px;resize:vertical}
+.radio-row{display:flex;gap:12px;flex-wrap:wrap}
+.radio-option{display:flex;align-items:center;gap:8px;border:1px solid var(--line);padding:10px 13px;border-radius:10px;color:#ddd5ea;font-size:.82rem}
+.radio-option input{width:auto;accent-color:var(--purple)}
+.check-row{display:flex;align-items:flex-start;gap:10px;color:#d9d2e6;font-size:.8rem;line-height:1.7}
+.check-row input{width:18px;min-width:18px;margin-top:3px;accent-color:var(--purple)}
+.submit-btn{grid-column:1/-1;width:100%;border:0;border-radius:14px;padding:16px 20px;background:linear-gradient(100deg,var(--gold),#ffad38);color:#17120a;font-weight:800;font-size:.9rem;cursor:pointer;box-shadow:0 8px 30px rgba(255,215,0,.14);transition:transform .2s,box-shadow .2s}
+.submit-btn:hover{transform:translateY(-2px);box-shadow:0 10px 35px rgba(255,215,0,.25)}
+.form-note{grid-column:1/-1;text-align:center;font-size:.74rem;color:#a8a0b7;line-height:1.7}
+.loading-message{display:none;grid-column:1/-1;text-align:center;padding:17px;border-radius:12px;border:1px solid rgba(0,255,255,.25);background:rgba(0,255,255,.06);color:var(--cyan);font-size:.86rem}
+.loading-message.show{display:block}
+.spinner{display:inline-block;width:15px;height:15px;border:2px solid rgba(0,255,255,.25);border-top-color:var(--cyan);border-radius:50%;vertical-align:middle;margin-right:8px;animation:spin .7s linear infinite}
+.contact-results{display:none;margin-top:22px}
+.contact-results.show{display:block;animation:fadeUp .45s ease both}
+.contact-results h3{text-align:center;color:var(--gold);font-family:Cinzel,serif;margin-bottom:8px}
+.contact-results>p{text-align:center;color:var(--muted);font-size:.82rem;line-height:1.7;margin-bottom:16px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.contact-card{padding:20px;border:1px solid var(--line);border-radius:16px;background:rgba(24,20,37,.85)}
+.contact-card h4{margin-bottom:5px}
+.contact-card p{font-size:.79rem;color:var(--muted);margin-bottom:14px;line-height:1.65}
+.contact-card .btn{width:100%;font-size:.77rem;padding:11px 13px}
+.community-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:30px}
+.community-card{display:flex;align-items:center;gap:16px}
+.community-icon{display:grid;place-items:center;width:54px;height:54px;flex:0 0 54px;border-radius:16px;background:rgba(138,43,226,.2);font-size:1.6rem}
+.community-card h3{font-size:1rem;margin-bottom:5px}
+.community-card p{font-size:.8rem;color:var(--muted);line-height:1.65;margin-bottom:12px}
+.community-card .btn{padding:9px 15px;font-size:.75rem}
+.social-follow{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px;margin-top:25px;color:var(--muted);font-size:.82rem;text-align:center}
+.social-follow strong{color:var(--gold)}
+footer{padding:30px 18px 36px;border-top:1px solid var(--line);text-align:center;color:#aaa2b8;font-size:.76rem;line-height:1.9}
+footer strong{color:var(--gold);font-family:Cinzel,serif}
+.float-wa{position:fixed;right:18px;bottom:18px;z-index:40;width:56px;height:56px;display:grid;place-items:center;border-radius:50%;background:#20c96b;color:#062511;font-size:1.55rem;box-shadow:0 8px 30px rgba(32,201,107,.35);transition:transform .2s}
+.float-wa:hover{transform:translateY(-4px) scale(1.04)}
+
+/* Modal Peringatan Akses Grup WhatsApp */
+.modal-overlay {position:fixed;inset:0;z-index:999;display:flex;align-items:center;justify-content:center;background:rgba(10,10,15,0.85);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:16px;transition:opacity .3s ease,visibility .3s ease;opacity:0;visibility:hidden;pointer-events:none}
+.modal-overlay.show {opacity:1;visibility:visible;pointer-events:auto}
+.modal-card {max-width:440px;width:100%;background:rgba(22,19,34,0.92);border:1px solid rgba(255,215,0,0.4);border-radius:24px;padding:30px 24px;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,0.6);animation:fadeUp .4s ease both}
+.modal-icon {width:64px;height:64px;background:rgba(255,215,0,0.15);color:var(--gold);border-radius:20px;display:grid;place-items:center;font-size:1.8rem;margin:0 auto 18px}
+.modal-card h3 {font-family:Cinzel,serif;color:var(--gold);font-size:1.3rem;margin-bottom:10px}
+.modal-card p {color:var(--muted);font-size:0.86rem;line-height:1.8;margin-bottom:24px}
+
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+#loader{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:#08070d;transition:opacity .35s ease,visibility .35s ease}
+#loader.hide{opacity:0;visibility:hidden;pointer-events:none}
+.loader-inner{text-align:center;padding:20px}
+.loader-mark{width:72px;height:72px;border-radius:50%;margin:0 auto 16px;border:2px solid transparent;border-top-color:var(--gold);border-right-color:var(--cyan);display:grid;place-items:center;animation:spin 1s linear infinite}
+.loader-mark span{font-family:Cinzel,serif;font-weight:800;color:var(--gold);animation:spin 1s linear infinite reverse}
+.loader-title{font-family:Cinzel,serif;font-size:.88rem;letter-spacing:.15em;color:#fff}
+.loader-sub{font-size:.7rem;color:#9e96b0;margin-top:8px}
+@keyframes spin{to{transform:rotate(360deg)}}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:760px){.nav-links{display:none}.navbar{padding:12px 16px}.nav-cta{padding:10px 14px;font-size:.72rem}.hero{min-height:570px;padding-top:65px}.requirements{grid-template-columns:repeat(2,minmax(0,1fr))}.about-grid{grid-template-columns:1fr}.content-section{padding-top:58px!important;padding-bottom:58px!important}}
+@media(max-width:520px){.hero{min-height:555px}.logo-orb{width:88px;height:88px}.hero-desc{font-size:.84rem}.hero-actions .btn{width:100%;max-width:290px}.requirements{gap:10px}.req-card{padding:17px;min-height:155px}.req-card h3{font-size:.83rem}.req-card p{font-size:.75rem}form{grid-template-columns:1fr;gap:14px}.field.full,.submit-btn,.form-note,.loading-message{grid-column:1}.contact-grid,.community-grid{grid-template-columns:1fr}.glass{padding:20px}.video-section{padding-left:12px;padding-right:12px}.float-wa{width:50px;height:50px;right:13px;bottom:13px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="loader" aria-label="Memuat website">
+  <div class="loader-inner"><div class="loader-mark"><span>EA</span></div><div class="loader-title">ETHRÉNAL`AURORA</div><div class="loader-sub">ENTER THE AURORA</div></div>
+</div>
+
+<nav class="navbar">
+  <a class="brand" href="#home">✦ ETHRÉNAL`AURORA</a>
+  <div class="nav-links"><a href="#about">About</a><a href="#requirements">Requirements</a><a href="#register">Register</a><a href="#community">Community</a></div>
+  <a class="nav-cta" href="#register">OPEN MEMBER ↗</a>
+</nav>
+
+<header class="hero" id="home">
+  <img class="hero-art" src="https://files.catbox.moe/r30z0f.jpg" alt="" fetchpriority="high">
+  <div class="hero-inner">
+    <div class="logo-orb"><img src="https://files.catbox.moe/r30z0f.jpg" alt="Logo ETHRÉNAL`AURORA"></div>
+    <div class="eyebrow">Mobile Legends • Community • Gen 2</div>
+    <h1>ETHRÉNAL<span>`AURORA</span></h1>
+    <p class="tagline">Born in Dusk, Shine like Aurora.</p>
+    <p class="hero-desc">We Don't Just Play, We Dominate. <strong>Open Member Gen 2 is Now Open!</strong></p>
+    <div class="hero-actions">
+      <a class="btn btn-gold" href="javascript:void(0);" onclick="openRestrictedModal()">☏ JOIN WHATSAPP</a>
+      <a class="btn btn-purple" href="https://discord.gg/akgHgMEHs" target="_blank" rel="noopener">◈ JOIN DISCORD</a>
+    </div>
+    <div class="hero-meta">SQUAD 211 · SHIONYOU · ID SQUAD 13137790</div>
+  </div>
+</header>
+
+<section class="video-section reveal" aria-labelledby="video-title">
+  <div class="section-kicker">AURORA IN MOTION</div>
+  <h2 class="section-title" id="video-title">Enter Our Universe</h2>
+  <div class="video-frame">
+    <video autoplay muted loop playsinline preload="metadata" poster="https://files.catbox.moe/r30z0f.jpg" controls aria-label="Video banner ETHRÉNAL`AURORA">
+      <source src="https://files.catbox.moe/z2gelq.mp4" type="video/mp4">
+      Browser kamu belum mendukung video HTML5.
+    </video>
+  </div>
+</section>
+
+<section class="content-section reveal" id="about">
+  <div class="section-kicker">WHO WE ARE</div><h2 class="section-title">ABOUT OUR FAMILY</h2>
+  <p class="section-copy">ETHRÉNAL`AURORA bukan sekadar squad MLBB. Kami adalah keluarga yang solid, loyal, anti drama, dan fokus berkembang bersama. Tempat terbaik untuk push rank, scrim, MCL, dan jadi pro player bersama.</p>
+  <div class="about-grid">
+    <article class="glass"><h3>✦ Our Values</h3><p>Solid, loyal, dewasa, saling support, dan menjaga nama baik keluarga. No drama, no toxic — kita tumbuh bareng.</p></article>
+    <article class="glass"><h3>✦ Squad Identity</h3><div class="statline"><span>🏆</span> <span>Squad Number: <b>211</b></span></div><div class="statline"><span>🌌</span> <span>Squad Name: <b>Shionyou</b></span></div><div class="statline"><span>🛡️</span> <span>Squad ID: <b>13137790</b></span></div></article>
+  </div>
+</section>
+
+<section class="content-section reveal" id="requirements">
+  <div class="section-kicker">READ BEFORE APPLYING</div><h2 class="section-title">SYARAT SELEKSI</h2>
+  <p class="section-copy">Pastikan kamu siap berkembang bersama dan menjaga lingkungan komunitas yang nyaman.</p>
+  <div class="requirements">
+    <article class="glass req-card"><div class="req-icon">🎂</div><h3>Min. Umur</h3><p>Minimal berusia <strong>15 tahun+</strong>.</p></article>
+    <article class="glass req-card"><div class="req-icon">🏆</div><h3>Minimal Rank</h3><p>Rank minimal <strong>Mythic Glory</strong>.</p></article>
+    <article class="glass req-card"><div class="req-icon">⚔️</div><h3>Hero & Role</h3><p>Kuasai minimal <strong>4 hero meta</strong> dan <strong>2 role</strong>.</p></article>
+    <article class="glass req-card"><div class="req-icon">✍️</div><h3>Wajib CN TikTok</h3><p>Ganti nama menjadi format berikut:</p><span class="copy-chip">ethrénal`namamu</span></article>
+    <article class="glass req-card"><div class="req-icon">🪪</div><h3>Wajib Isi Bio</h3><p>Tambahkan teks ini ke bio TikTok / Instagram:</p><span class="copy-chip">𝐩𝐚𝐫𝐭 𝐨𝐟 𝐭𝐡𝐞 𝐜𝐫𝐞𝐚𝐭𝐨𝐫 ETHRENAL`AURORA</span></article>
+    <article class="glass req-card"><div class="req-icon">📱</div><h3>TikTok & Hashtag</h3><p>Wajib follow akun resmi dan gunakan <strong>#ethrénal`Aurora</strong>.</p></article>
+    <article class="glass req-card"><div class="req-icon">🤝</div><h3>No Double Clan</h3><p>Anti drama, anti toxic, dan tidak tergabung di clan/squad lain.</p></article>
+    <article class="glass req-card"><div class="req-icon">💬</div><h3>Aktif Komunitas</h3><p>Wajib aktif di WhatsApp Community dan Discord.</p></article>
+    <article class="glass req-card"><div class="req-icon">🌟</div><h3>Attitude</h3><p>Dewasa, solid, loyal, mau mabar, dan siap belajar bersama.</p></article>
+  </div>
+</section>
+
+<section class="content-section reveal" id="register">
+  <div class="section-kicker">YOUR NEXT CHAPTER STARTS HERE</div><h2 class="section-title">OPEN MEMBER GEN 2</h2>
+  <p class="form-intro">Isi data pendaftaran dengan benar. Setelah dikirim, kamu akan diarahkan ke WhatsApp Founder Utama dan tersedia tombol chat untuk kedua founder dengan pesan yang sudah disiapkan.</p>
+  <div class="form-wrap glass">
+    <form id="joinForm" novalidate>
+      <div class="field"><label for="fullname">Nama Lengkap *</label><input id="fullname" name="fullname" type="text" placeholder="Nama kamu" required autocomplete="name"></div>
+      <div class="field"><label for="age">Umur *</label><input id="age" name="age" type="number" min="1" max="99" placeholder="Umur kamu" required></div>
+      <div class="field full"><label for="nickname">Nickname MLBB + ID MLBB *</label><input id="nickname" name="nickname" type="text" placeholder="Contoh: Aurora#12345678" required></div>
+      <div class="field"><label for="rank">Rank Saat Ini *</label><select id="rank" name="rank" required><option value="">Pilih rank</option><option>Mythic Glory</option><option>Immortal</option></select></div>
+      <div class="field"><label for="role">Role Utama *</label><select id="role" name="role" required><option value="">Pilih role</option><option>EXP Laner</option><option>Jungler</option><option>Mid Laner</option><option>Gold Laner</option><option>Roamer</option></select></div>
+      <div class="field"><label for="heroes">Jumlah Hero yang Dikuasai *</label><input id="heroes" name="heroes" type="number" min="0" placeholder="Contoh: 8" required></div>
+      <div class="field"><label for="social">Akun TikTok / Instagram (opsional)</label><input id="social" name="social" type="text" placeholder="@username (boleh dikosongkan)"></div>
+      <div class="field full"><label for="reason">Alasan Ingin Join *</label><textarea id="reason" name="reason" placeholder="Ceritakan alasan kamu ingin bergabung..." required></textarea></div>
+      <div class="field full"><span class="field-label">Siap Ganti Nama? *</span><div class="radio-row"><label class="radio-option"><input type="radio" name="readyCN" value="Ya, Siap" required> Ya, Siap</label><label class="radio-option"><input type="radio" name="readyCN" value="Tidak" required> Tidak</label></div></div>
+      <div class="field full"><label class="check-row"><input id="agree" name="agree" type="checkbox" required><span>Saya berjanji anti drama dan siap mematuhi rules ETHRÉNAL`AURORA. *</span></label></div>
+      <div class="loading-message" id="loadingMessage" role="status" aria-live="polite"><span class="spinner"></span>Mengarahkan ke WhatsApp Founder...</div>
+      <button class="submit-btn" type="submit" id="submitBtn">SAYA SIAP JOIN — KIRIM KE WHATSAPP ↗</button>
+      <p class="form-note">* Wajib diisi. Data pendaftaran akan disusun menjadi pesan WhatsApp; website ini tidak menyimpan data ke server.</p>
+    </form>
+    <div class="contact-results" id="contactResults" aria-live="polite">
+      <h3>Pilih Founder untuk Mengirim Pendaftaran</h3>
+      <p>WhatsApp Founder Utama akan dibuka otomatis. Jika tidak terbuka, gunakan tombol di bawah. Kamu juga bisa mengirim pesan yang sama ke Founder Kedua.</p>
+      <div class="contact-grid">
+        <article class="contact-card"><h4>👑 Founder Utama — Niellxyn</h4><p>Selalu online 24 jam · Respons utama pendaftaran.</p><a class="btn btn-gold" id="founder1Btn" href="https://wa.me/6285602832687" target="_blank" rel="noopener">CHAT WHATSAPP 1</a></article>
+        <article class="contact-card"><h4>🌙 Founder Kedua — Tasya</h4><p>Jarang online · Bisa dihubungi jika diperlukan.</p><a class="btn btn-purple" id="founder2Btn" href="https://wa.me/6289677969051" target="_blank" rel="noopener">CHAT WHATSAPP 2</a></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section reveal" id="community">
+  <div class="section-kicker">FIND YOUR PEOPLE</div><h2 class="section-title">JOIN THE COMMUNITY</h2>
+  <p class="section-copy">Terhubung dengan member, cari teman mabar, dan ikuti kabar terbaru ETHRÉNAL`AURORA.</p>
+  <div class="community-grid">
+    <article class="glass community-card"><div class="community-icon">☏</div><div><h3>WhatsApp Community</h3><p>Gabung untuk info open member, mabar, dan aktivitas squad.</p><a class="btn btn-gold" href="javascript:void(0);" onclick="openRestrictedModal()">JOIN WHATSAPP ↗</a></div></article>
+    <article class="glass community-card"><div class="community-icon">◈</div><div><h3>Discord Server</h3><p>Masuk server Discord untuk komunikasi dan kegiatan komunitas.</p><a class="btn btn-purple" href="https://discord.gg/akgHgMEHs" target="_blank" rel="noopener">JOIN DISCORD ↗</a></div></article>
+  </div>
+  <div class="social-follow">Akun resmi TikTok: <strong>@officialethrenal211auro0</strong> <a class="btn btn-purple" href="https://www.tiktok.com/@officialethrenal211auro0" target="_blank" rel="noopener">FOLLOW TIKTOK ↗</a></div>
+</section>
+
+<!-- Modal Peringatan Akses Grup WhatsApp -->
+<div class="modal-overlay" id="restrictedModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+  <div class="modal-card">
+    <div class="modal-icon"><i class="fas fa-exclamation-triangle"></i></div>
+    <h3 id="modalTitle">AKSES DITAHAN!</h3>
+    <p>Kamu belum mengikuti seleksi! Silakan baca syarat dan isi formulir pendaftaran di bawah terlebih dahulu sebelum bergabung ke grup WhatsApp Squad ETHRÉNAL`AURORA.</p>
+    <button class="submit-btn" type="button" onclick="closeRestrictedModal()">SIAP, SCROLL KE FORM SELEKSI</button>
+  </div>
+</div>
+
+<footer><strong>ETHRÉNAL`AURORA</strong><br>Copyright © 2026 ETHRÉNAL`AURORA — All Rights Reserved.<br>Community for ethrénal`Aurora · Born in Dusk, Shine like Aurora.</footer>
+<a class="float-wa" href="javascript:void(0);" onclick="openRestrictedModal()" aria-label="Chat WhatsApp Founder Utama" title="Chat WhatsApp Founder">☏</a>
+
+<script>
+// Fungsi Modal Peringatan WhatsApp
+function openRestrictedModal() {
+  const modal = document.getElementById('restrictedModal');
+  modal.classList.add('show');
+}
+
+function closeRestrictedModal() {
+  const modal = document.getElementById('restrictedModal');
+  modal.classList.remove('show');
+  // Scroll mulus otomatis ke bagian syarat / form pendaftaran
+  const targetSection = document.getElementById('requirements');
+  targetSection.scrollIntoView({ behavior: 'smooth' });
+}
+
+(() => {
+  const loader = document.getElementById('loader');
+  // Loader sengaja hanya tampil 1,2 detik agar tidak menutupi halaman terlalu lama.
+  window.addEventListener('load', () => setTimeout(() => loader.classList.add('hide'), 1200));
+  // Fallback jika ada aset eksternal yang lambat.
+  setTimeout(() => loader.classList.add('hide'), 1800);
+
+  const revealItems = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealItems.forEach(item => observer.observe(item));
+  } else {
+    revealItems.forEach(item => item.classList.add('visible'));
+  }
+
+  const form = document.getElementById('joinForm');
+  const loadingMessage = document.getElementById('loadingMessage');
+  const submitBtn = document.getElementById('submitBtn');
+  const contactResults = document.getElementById('contactResults');
+  const founder1Btn = document.getElementById('founder1Btn');
+  const founder2Btn = document.getElementById('founder2Btn');
+  let preparedMessage = '';
+
+  function buildMessage() {
+    const get = id => document.getElementById(id).value.trim();
+    const cn = form.querySelector('input[name="readyCN"]:checked');
+    const social = get('social') || 'Belum dicantumkan';
+    return `Halo Founder ETHRÉNAL\`AURORA! 👋
+
+Saya mau daftar member Gen 2.
+
+👤 Nama: ${get('fullname')}
+🍁 Umur: ${get('age')}
+🎮 Nick MLBB: ${get('nickname')}
+⭐ Rank: ${get('rank')}
+⚔️ Role: ${get('role')}
+🦸 Jumlah Hero: ${get('heroes')}
+📱 TikTok: ${social}
+✅ Siap CN: ${cn ? cn.value : '-'}
+💬 Alasan: ${get('reason')}
+
+Saya sudah baca rules dan siap anti drama. Mohon dicek ya kak Founder!`;
+  }
+
+  function setWhatsAppLinks(message) {
+    const encoded = encodeURIComponent(message);
+    founder1Btn.href = 'https://wa.me/6285602832687?text=' + encoded;
+    founder2Btn.href = 'https://wa.me/6289677969051?text=' + encoded;
+  }
+
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+    const age = Number(document.getElementById('age').value);
+    const heroes = Number(document.getElementById('heroes').value);
+    if (age < 15) {
+      document.getElementById('age').setCustomValidity('Syarat minimum umur adalah 15 tahun.');
+      document.getElementById('age').reportValidity();
+      document.getElementById('age').setCustomValidity('');
+      return;
+    }
+    if (heroes < 0) {
+      document.getElementById('heroes').setCustomValidity('Jumlah hero tidak boleh negatif.');
+      document.getElementById('heroes').reportValidity();
+      document.getElementById('heroes').setCustomValidity('');
+      return;
+    }
+    preparedMessage = buildMessage();
+    setWhatsAppLinks(preparedMessage);
+    loadingMessage.classList.add('show');
+    submitBtn.disabled = true;
+    submitBtn.style.opacity = '.7';
+    submitBtn.textContent = 'MENYIAPKAN WHATSAPP...';
+
+    // Buka tab kosong langsung saat klik agar tidak mudah diblokir popup blocker.
+    const waWindow = window.open('about:blank', '_blank');
+    window.setTimeout(() => {
+      const target = 'https://wa.me/6285602832687?text=' + encodeURIComponent(preparedMessage);
+      if (waWindow && !waWindow.closed) {
+        waWindow.location.href = target;
+      } else {
+        // Tombol Founder Utama tetap tersedia bila browser memblokir popup.
+        founder1Btn.href = target;
+      }
+      loadingMessage.classList.remove('show');
+      contactResults.classList.add('show');
+      submitBtn.disabled = false;
+      submitBtn.style.opacity = '1';
+      submitBtn.textContent = 'FORM TERKIRIM — BUKA WHATSAPP LAGI ↗';
+      contactResults.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 1500);
+  });
+})();
+</script>
+</body>
+</html>
